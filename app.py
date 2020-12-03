@@ -50,7 +50,7 @@ def process_file(path, filename):
     d_data = clean_data.delimited_data(path)
     predict_data = predict_label.predict_labels(d_data)
     writer = predict_label.pd.ExcelWriter(app.config['DOWNLOAD_FOLDER'] + 'pred_' + filename, engine='xlsxwriter')
-    predict_data.to_excel(writer, index=False, encoding='utf-8', sheet_name='Sheet1')
+    predict_data.to_excel(writer, index=False, sheet_name='Sheet1')
     writer.save()
     return
 
