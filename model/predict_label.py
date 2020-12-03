@@ -8,7 +8,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn import decomposition, ensemble
 from sklearn.metrics import roc_curve, auc, confusion_matrix
 from sklearn.tree import DecisionTreeClassifier
-import pandas, xgboost, numpy, textblob, string
+import pandas, numpy, textblob, string
 from textblob import TextBlob
 
 import os
