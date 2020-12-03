@@ -45,8 +45,7 @@ def create_figure(student_name, epa, data):
 
 @bp.route('/visualize', methods=('GET', 'POST'))
 def visualize():
-    predict_data = pd.read_excel('/Users/zwang199/Projects/NLP_Interface_v2/downloads/pred_harry_potter_data.xlsx',
-                               encoding='utf-8', sheet_name='Sheet1')
+    predict_data = pd.read_excel('downloads/pred_harry_potter_data.xlsx', sheet_name='Sheet1')
     grouped_data = predict_data.groupby(['student_name', 'EPA_pred', 'eval_date'], as_index=False) \
                                .agg({'answer_sentence': list,
                                      'Sentiment_pred':'mean'})
