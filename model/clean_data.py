@@ -94,7 +94,7 @@ def basic_clean(string):
 
 
 def delimited_data(file_name):
-    data = pd.read_excel(file_name, encoding='utf-8')
+    data = pd.read_excel(file_name)
     data['comment_id'] = [i for i in range(len(data))]
     data_use = data[["comment_id", "answer_text", "Student", "eval_end_date"]]
     data_use = remove_na(data_use)
