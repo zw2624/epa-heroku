@@ -2,3 +2,5 @@ Flask
 numpy
 pandas
 sklearn
+werkzeug
+bokeh
