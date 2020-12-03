@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+{% block header %}
+    <meta charset="UTF-8">
+        <style>
+            body{
+                background-image: url("../static/VEC.png");
+                background-size: cover;
+            }
+        </style>
+        <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.css" rel="stylesheet" type="text/css">
+        <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.js"></script>
+{% endblock %}
+{% block content %}
+    <div align="center">
+       <h1>EPA Classification and Sentiment Analysis</h1>
+{#        {% if g.user %}#}
+       <h2>Upload new File</h2>
+       <form method=POST enctype=multipart/form-data>
+           <p><input type=file name=file>
+               <input type=submit value=Upload>
+       </form>
+{#    {% endif %}#}
+    </div>
+    {% if have_table %}
+        <H1> Evaluation </H1>
+
+        {{ script|safe }}
+        {{ div|safe }}
+        <H2> Distribution for the sentiment </H2>
+        {{ script2|safe }}
+        {{ div2|safe }}
+    {% endif %}
+
+{% endblock %}
+
