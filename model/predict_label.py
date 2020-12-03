@@ -27,7 +27,7 @@ def train_model(classifier, feature_vector_train, label, feature_vector_valid, i
 
 def predict_labels(herry_data):
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    model_data = pd.read_excel('/Users/zwang199/Projects/NLP_Interface_v2/model/rest_data_delimited.xlsx', encoding='utf-8', sheet_name = 'Sheet1')
+    model_data = pd.read_excel('/Users/zwang199/Projects/NLP_Interface_v2/model/rest_data_delimited.xlsx', sheet_name = 'Sheet1')
     model_data = model_data.dropna(axis=0)
     raw_X = np.array(model_data['answer_sentence'])
     raw_y = list(model_data['sentence_epa_spss'])
