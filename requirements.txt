@@ -49,3 +49,4 @@ urllib3==1.26.2
 wasabi==0.8.0
 Werkzeug==1.0.1
 xgboost==1.2.1
+xlrd==1.2.0
