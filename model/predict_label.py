@@ -41,7 +41,7 @@ def predict_labels(herry_data):
         y.append(temp_y)
     y = np.array(y)
     # load the dataset
-    data = open('/Users/zwang199/Projects/NLP_Interface_v2/model/corpus').read()
+    data = open('model/corpus').read()
     labels, texts = [], []
     for i, line in enumerate(data.split("\n")):
         content = line.split()
